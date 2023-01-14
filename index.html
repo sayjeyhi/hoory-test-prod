@@ -10,14 +10,21 @@
 <body style="background: #e3e3e3;">
   <!-- Hoory -->
   <script>
-      window.hoory={initializeHidden:!0,forceChatInit:!0,
-                
-       firstName: "SERGEY", // Replace this with your user's first name
+      window.hoory={
+        initializeHidden:!0,
+        forceChatInit:!0,     
+        firstName: "SERGEY", // Replace this with your user's first name
         lastName: "CHILINGARYAN", // Replace this with your user's last name
         email: "S.CHILINGARYAN94@GMAIL.COM", // Replace this with your user's email address
         avatar: "https://pyxis.nymag.com/v1/imgs/bf2/b1e/6f6018c7b262f744bf717f22e291fb5b50-alfred-lede.2x.rhorizontal.w700.jpg" // Replace this with your user's avatar url
        };
-      !function(h,oo,r,y){h[r]=h[r]||{},h[r].workspace=y;const f=oo.getElementsByTagName('script')[0],j=oo.createElement('script');j.async=!0,j.src='https://embed.hoory.com/embed.js?w='+y,f.parentNode.insertBefore(j, f),j.onload=function(){h[r].init()}}(window,document,'hoory','ucraft-next');</script>
+      !function(h,oo,r,y){h[r]=h[r]||{},h[r].workspace=y;const f=oo.getElementsByTagName('script')[0],j=oo.createElement('script');j.async=!0,j.src='https://embed.hoory.com/embed.js?w='+y,f.parentNode.insertBefore(j, f),j.onload=function(){
+          h[r].init();
+          
+          window.hoory.onChatInit(() => {
+            console.log("The chat initialized!");
+          });
+      }}(window,document,'hoory','ucraft-next');</script>
   <!-- Hoory -->
     
 </body>
